@@ -3,5 +3,5 @@ const fs = require('./funcoes')
 
 const caminho = path.join(__dirname, 'legendas')
 
-const arquivos = fs.lerDiretorio(caminho)
-console.log(arquivos)
+fs.lerDiretorio(caminho)
+    .then(console.log)
