@@ -1,3 +1,4 @@
+const { fstat } = require('fs')
 const path = require('path')
 const fn = require('./funcoes')
 
@@ -8,4 +9,5 @@ fn.lerDiretorio(caminho)
     .then(arquivosSRT => fn.lerArquivos(arquivosSRT))
     .then(conteudos => conteudos.join('\n'))
     .then(todoConteudo => todoConteudo.split('\n'))
+    .then(linhas => fn.removerSeVazio(linhas))
     .then(console.log)

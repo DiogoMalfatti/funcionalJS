@@ -32,9 +32,14 @@ function elementosTerminadosCom(array, padrao) {
     return array.filter(el => el.endsWith(padrao))
 }
 
+function removerSeVazio(array) {
+    return array.filter(el => el.trim())
+}
+
 module.exports = {
     lerDiretorio,
     lerArquivo,
     lerArquivos,
-    elementosTerminadosCom
+    elementosTerminadosCom,
+    removerSeVazio,
 }
